@@ -35,4 +35,93 @@
   color: #a9a9a9;
 }
 
+.activity-cont {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(189, 189, 189);
+  padding-bottom: 15px;
+  margin: 32px 0px 18px;
+}
 
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+user agent stylesheet nav {
+  display: block;
+}
+.bar {
+  width: 30vw;
+  margin: auto;
+  border: 1px solid #bdbdbd;
+}
+
+.activity {
+  width: 95%;
+  max-width: 610px;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  /* position: absolute;
+width: 19px;
+height: 17px;
+left: 499px;
+top: 130px; */
+  margin: 0.4rem 0;
+  padding: 0 2rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #333333;
+}
+a{
+  text-decoration: underline;
+}
+.cont {
+  all: unset;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.cont.active::after {
+  height: 4px;
+}
+.cont::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0px;
+  width: 89px;
+  background: rgb(47, 128, 237);
+  border-radius: 4px 4px 0px 0px;
+  bottom: -15px;
+  left: 50%;
+  transition: height 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  transform: translateX(-50%);
+}
+
+.cont:hover {
+  opacity: 0.75;
+}
