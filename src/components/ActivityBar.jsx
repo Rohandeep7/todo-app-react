@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 function ActivityBar() {
   return (
     <>
-      <div className="activity">
+      <div className="">
         <div className="activity-cont">
           <NavLink
              to="/"
              activeclassname="active"
-            className="all-todos cont"
+             className="all-todos cont"
           >
             All
           </NavLink>

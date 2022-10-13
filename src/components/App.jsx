@@ -5,11 +5,13 @@ import ActivityBar from "./ActivityBar";
 import ActiveTodos from "./ActiveTodos";
 import AllTodos from "./AllTodos";
 import CompletedTodos from "./CompletedTodos";
+import { TodoProvider } from "../context/TodoContext";
 function App() {
   return (
+    <TodoProvider>
     <div className="App">
       <Navbar/>
-      <main className="container">
+      <main className="activity">
         <ActivityBar/>
         <Routes>
           <Route exact path='/' element={<AllTodos/>}/>
@@ -19,6 +21,7 @@ function App() {
       </main>
       <Footer/>
     </div>
+    </TodoProvider>
   );
 }
 
