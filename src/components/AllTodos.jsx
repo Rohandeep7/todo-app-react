@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useContext } from "react";
 import TodoContext from "../context/TodoContext";
+import TodoItem from "./shared/TodoItem";
 function AllTodos() {
   const [input, setInput] = useState("");
   const { todos, dispatch } = useContext(TodoContext);
@@ -24,39 +25,21 @@ function AllTodos() {
 
   return (
     <div>
-      <form action="" onSubmit={handleSubmit}>
+      <form className='container' action="" onSubmit={handleSubmit}>
         <input
+          className="todo-input"
           type="text"
           onChange={(e) => setInput(e.target.value)}
           value={input}
-          placeholder="enter todo"
+          placeholder="add details"
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className='btn'>Add</button>
       </form>
       <div>
         {todos &&
           todos.map((todo) => {
             return (
-              <div key={todo.id}>
-                <div>
-      <label style={{textDecoration : todo.completed && 'line-through'}} htmlFor="subscribe">
-        <input
-          type="checkbox"
-          checked={todo.completed}
-          onChange={()=>handleChange(todo.id,todo.completed)}
-          id={todo.id}
-        />
-        {todo.desc}
-      </label>
-    </div>
-                {/* <h1
-                  style={{ textDecoration: todo.completed && "line-through" }}
-                >
-                  {todo.desc}
-                </h1>
-                <button onClick={() => handleToggle(todo.id)}>Toggle</button>
-                <button onClick={() => handleDelete(todo.id)}>Delete</button> */}
-              </div>
+              <TodoItem handleChange={handleChange} key={todo.id} todo={todo}/>
             );
           })}
       </div>
