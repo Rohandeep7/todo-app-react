@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Raleway:wght@700&display=swap");
 
-body{
-  font-family: 'Montserrat',sans-serif;
+body {
+  font-family: "Montserrat", sans-serif;
 }
 
 .nav {
@@ -72,21 +72,12 @@ user agent stylesheet nav {
   flex-direction: column;
 }
 
-span {
-  /* position: absolute;
-width: 19px;
-height: 17px;
-left: 499px;
-top: 130px; */
-  margin: 0.4rem 0;
-  padding: 0 2rem;
+.span {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
-  /* identical to box height */
-
   color: #333333;
 }
 a {
@@ -130,32 +121,36 @@ a {
 }
 
 .btn {
-    all: unset;
-    color: white;
-    font-weight: 600;
-    font-size: 14px;
-    text-align: center;
-    box-shadow: rgba(127, 177, 243, 0.4) 0px 2px 6px;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    cursor: pointer;
-    background: rgb(47, 128, 237);
-    border-radius: 12px;
-    font-weight: 600;
+  all: unset;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: rgba(127, 177, 243, 0.4) 0px 2px 6px;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  cursor: pointer;
+  background: rgb(47, 128, 237);
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.btn:hover{
+  opacity: 0.8;
 }
 
 .todo-input {
   outline: none;
-    width: 80%;
-    border: 1px solid rgb(189, 189, 189);
-    border-radius: 12px;
-    padding: 20px 12px;
-    color: rgb(54, 54, 54);
-    font-weight: 500;
+  width: 80%;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 12px;
+  padding: 20px 12px;
+  color: rgb(54, 54, 54);
+  font-weight: 500;
 }
 
-.todo-input:focus{
-    box-shadow: 0px 2px 6px rgba(127, 177, 243, 0.4);
+.todo-input:focus {
+  box-shadow: 0px 2px 6px rgba(127, 177, 243, 0.4);
 }
 
 .container {
@@ -164,107 +159,30 @@ a {
   margin-bottom: 15px;
 }
 
-.item-container{
+.item-container {
   position: relative;
-    margin: 15px 5px;
+  margin: 15px 5px;
 }
 
-.todo-desc{
-  /* cursor: pointer;
-    position: relative;
-    display: block;
-    width: fit-content;
-    max-width: 90%;
-    padding: 0px 0px 2px 35px; */
-    /* input:checked~p{
-      text-decoration: line-through;
-  } */
-  
+.delete-all-btn{
+  float: right;
+  background: rgb(235, 87, 87);
+  color: white;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 12px 35px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  outline: none;
+  border: none;
+  margin: 25px 0px 5px auto;
   cursor: pointer;
-  position: relative;
-  display: block;
-  width: fit-content;
-  max-width:90%;
-  padding: 0px 0 2px 35px;
 }
 
-
-
-.todo-desc span{
-    border: 1px solid #828282;
-    border-radius: 4px;
-    position: absolute;
-    top: 1px;
-    left: 0px;
-    height: 24px;
-    width: 24px;
-    background-color: white;
+.delete-all-btn:hover{
+  opacity: 0.8;
 }
 
-.todo-desc span :hover{
-  background-color: #eeeeee;
-}
-
-.todo-desc span::after{
-
-    content: "";
-    position: absolute;
-    display: none;
-    left: 7px;
-    top: 2px;
-    width: 6px;
-    height: 13px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-
-}
-.todo-desc p{
-    /* font-size: 1.5rem;
-    font-weight: 500;
-    color: #000; */
-    /* position: absolute; */
-width: 199px;
-height: 22px;
-left: 446px;
-top: 273px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-
-color: #000000;
-}
-
-.todo-desc input{
-  box-sizing: border-box;
-
-
-width: 24px;
-height: 24px;
-left: 415px;
-top: 272px;
-
-/* Gray 3 */
-
-border: 1px solid #828282;
-border-radius: 4px;
-}
-
-.todo-desc input:checked~span{
-  background: #2F80ED;
-  border-color: transparent;
-  
-}
-
-.todo-desc input:checked~span::after{
-  display: block;
-}
-
-
+/*  */

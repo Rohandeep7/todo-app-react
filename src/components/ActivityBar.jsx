@@ -6,22 +6,20 @@ function ActivityBar() {
       <div className="">
         <div className="activity-cont">
           <NavLink
-             to="/"
-             activeclassname="active"
-             className="all-todos cont"
+            to="/"
+            className="all-todos cont"
+            end
           >
             All
           </NavLink>
           <NavLink
-            to="/active"
-            activeclassname="active"
+            to="/todos/active"
             className="active-todos cont"
           >
             Active
           </NavLink>
           <NavLink
-            to="/completed"
-            activeclassname="active"
+            to="/todos/completed"
             className="completed-todos cont"
           >
             Completed
