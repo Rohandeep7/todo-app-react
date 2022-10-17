@@ -1,15 +1,15 @@
 import { createContext, useEffect, useReducer } from "react";
+import useLocalStorage from "../components/custom-hooks/useLocalStorage";
 import TodoReducer from "./TodoReducer";
 const TodoContext=createContext()
 
 export const TodoProvider=({children})=>{
-
-  const initialState=localStorage.getItem('tasks') ? localStorage.getItem('tasks') : []
-  console.log(initialState)
-  const [state,dispatch]=useReducer(TodoReducer,[])
+  const [tasks,setTasks]=useLocalStorage('tasks',[])
+  const [state,dispatch]=useReducer(TodoReducer,tasks)
 
   useEffect(()=>{
-    localStorage.setItem('tasks',state)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setTasks(state)
   },[state])
 
   return <TodoContext.Provider value={{todos : state , dispatch}}>

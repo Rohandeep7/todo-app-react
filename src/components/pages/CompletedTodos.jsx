@@ -9,8 +9,6 @@ import { useParams } from 'react-router-dom';
 function CompletedTodos() {
   const {todos,dispatch}=useContext(TodoContext)
   const params=useParams()
-
-  console.log(params.activity)
   return (
     <div>
       <div>
